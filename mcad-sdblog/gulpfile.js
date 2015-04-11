@@ -1,6 +1,6 @@
 /*global -$ */
 'use strict';
-// generated on 2015-04-09 using generator-gulp-webapp 0.3.0
+// generated on 2015-04-11 using generator-gulp-webapp 0.3.0
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
