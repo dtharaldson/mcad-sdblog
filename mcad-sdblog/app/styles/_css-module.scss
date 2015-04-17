@@ -3,6 +3,9 @@
   &> h2 {
     padding: 0.5em 0.25em;
     font-family: monospace;
-    background-color: #eee;
+    background-color: $grey-lighter;
   }
+.sample-image {
+  display: block;
+  border: 1px solid $grey-lighter;
 }
