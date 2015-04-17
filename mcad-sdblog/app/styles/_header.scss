@@ -1,3 +1,8 @@
 .header {
-  background-color: yellow;
+  max-width: 12em;
+  line-height: 1;
+  font-size: 1.8em;
+  .logo-sdo {
+    color: $color-logo-sdo;
+  }
 }
