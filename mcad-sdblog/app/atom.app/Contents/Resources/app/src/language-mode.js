@@ -1,5 +1,5 @@
 (function() {
-  var Emitter, LanguageMode, OnigRegExp, Range, ScopeDescriptor, Subscriber, _, _ref;
+  var LanguageMode, OnigRegExp, Range, ScopeDescriptor, _;
 
   Range = require('text-buffer').Range;
 
@@ -7,44 +7,27 @@
 
   OnigRegExp = require('oniguruma').OnigRegExp;
 
-  _ref = require('emissary'), Emitter = _ref.Emitter, Subscriber = _ref.Subscriber;
-
   ScopeDescriptor = require('./scope-descriptor');
 
   module.exports = LanguageMode = (function() {
-    Emitter.includeInto(LanguageMode);
-
-    Subscriber.includeInto(LanguageMode);
-
     function LanguageMode(editor) {
       this.editor = editor;
       this.buffer = this.editor.buffer;
     }
 
-    LanguageMode.prototype.destroy = function() {
-      return this.unsubscribe();
-    };
+    LanguageMode.prototype.destroy = function() {};
 
     LanguageMode.prototype.toggleLineCommentForBufferRow = function(row) {
       return this.toggleLineCommentsForBufferRows(row, row);
     };
 
     LanguageMode.prototype.toggleLineCommentsForBufferRows = function(start, end) {
-      var allBlank, allBlankOrCommented, blank, buffer, columnEnd, columnStart, commentEndEntry, commentEndRegex, commentEndRegexString, commentEndString, commentStartEntry, commentStartRegex, commentStartRegexString, commentStartString, endMatch, indent, indentLength, indentRegex, indentString, line, match, row, scope, shouldUncomment, startMatch, tabLength, _i, _j, _k, _ref1;
+      var allBlank, allBlankOrCommented, blank, buffer, columnEnd, columnStart, commentEndRegex, commentEndRegexString, commentEndString, commentStartRegex, commentStartRegexString, commentStartString, endMatch, indent, indentLength, indentRegex, indentString, line, match, row, scope, shouldUncomment, startMatch, tabLength, _i, _j, _k, _ref, _ref1;
       scope = this.editor.scopeDescriptorForBufferPosition([start, 0]);
-      commentStartEntry = atom.config.getAll('editor.commentStart', {
-        scope: scope
-      })[0];
-      if (commentStartEntry == null) {
+      _ref = this.commentStartAndEndStringsForScope(scope), commentStartString = _ref.commentStartString, commentEndString = _ref.commentEndString;
+      if (commentStartString == null) {
         return;
       }
-      commentEndEntry = _.find(atom.config.getAll('editor.commentEnd', {
-        scope: scope
-      }), function(entry) {
-        return entry.scopeSelector === commentStartEntry.scopeSelector;
-      });
-      commentStartString = commentStartEntry != null ? commentStartEntry.value : void 0;
-      commentEndString = commentEndEntry != null ? commentEndEntry.value : void 0;
       buffer = this.editor.buffer;
       commentStartRegexString = _.escapeRegExp(commentStartString).replace(/(\s+)$/, '(?:$1)?');
       commentStartRegex = new OnigRegExp("^(\\s*)(" + commentStartRegexString + ")");
@@ -118,9 +101,9 @@
     };
 
     LanguageMode.prototype.foldAll = function() {
-      var currentRow, endRow, startRow, _i, _ref1, _ref2, _ref3;
-      for (currentRow = _i = 0, _ref1 = this.buffer.getLastRow(); 0 <= _ref1 ? _i <= _ref1 : _i >= _ref1; currentRow = 0 <= _ref1 ? ++_i : --_i) {
-        _ref3 = (_ref2 = this.rowRangeForFoldAtBufferRow(currentRow)) != null ? _ref2 : [], startRow = _ref3[0], endRow = _ref3[1];
+      var currentRow, endRow, startRow, _i, _ref, _ref1, _ref2;
+      for (currentRow = _i = 0, _ref = this.buffer.getLastRow(); 0 <= _ref ? _i <= _ref : _i >= _ref; currentRow = 0 <= _ref ? ++_i : --_i) {
+        _ref2 = (_ref1 = this.rowRangeForFoldAtBufferRow(currentRow)) != null ? _ref1 : [], startRow = _ref2[0], endRow = _ref2[1];
         if (startRow == null) {
           continue;
         }
@@ -129,21 +112,21 @@
     };
 
     LanguageMode.prototype.unfoldAll = function() {
-      var fold, row, _i, _j, _len, _ref1, _ref2;
-      for (row = _i = _ref1 = this.buffer.getLastRow(); _ref1 <= 0 ? _i <= 0 : _i >= 0; row = _ref1 <= 0 ? ++_i : --_i) {
-        _ref2 = this.editor.displayBuffer.foldsStartingAtBufferRow(row);
-        for (_j = 0, _len = _ref2.length; _j < _len; _j++) {
-          fold = _ref2[_j];
+      var fold, row, _i, _j, _len, _ref, _ref1;
+      for (row = _i = _ref = this.buffer.getLastRow(); _ref <= 0 ? _i <= 0 : _i >= 0; row = _ref <= 0 ? ++_i : --_i) {
+        _ref1 = this.editor.displayBuffer.foldsStartingAtBufferRow(row);
+        for (_j = 0, _len = _ref1.length; _j < _len; _j++) {
+          fold = _ref1[_j];
           fold.destroy();
         }
       }
     };
 
     LanguageMode.prototype.foldAllAtIndentLevel = function(indentLevel) {
-      var currentRow, endRow, startRow, _i, _ref1, _ref2, _ref3;
+      var currentRow, endRow, startRow, _i, _ref, _ref1, _ref2;
       this.unfoldAll();
-      for (currentRow = _i = 0, _ref1 = this.buffer.getLastRow(); 0 <= _ref1 ? _i <= _ref1 : _i >= _ref1; currentRow = 0 <= _ref1 ? ++_i : --_i) {
-        _ref3 = (_ref2 = this.rowRangeForFoldAtBufferRow(currentRow)) != null ? _ref2 : [], startRow = _ref3[0], endRow = _ref3[1];
+      for (currentRow = _i = 0, _ref = this.buffer.getLastRow(); 0 <= _ref ? _i <= _ref : _i >= _ref; currentRow = 0 <= _ref ? ++_i : --_i) {
+        _ref2 = (_ref1 = this.rowRangeForFoldAtBufferRow(currentRow)) != null ? _ref1 : [], startRow = _ref2[0], endRow = _ref2[1];
         if (startRow == null) {
           continue;
         }
@@ -154,9 +137,9 @@
     };
 
     LanguageMode.prototype.foldBufferRow = function(bufferRow) {
-      var currentRow, endRow, fold, startRow, _i, _ref1, _ref2;
+      var currentRow, endRow, fold, startRow, _i, _ref, _ref1;
       for (currentRow = _i = bufferRow; bufferRow <= 0 ? _i <= 0 : _i >= 0; currentRow = bufferRow <= 0 ? ++_i : --_i) {
-        _ref2 = (_ref1 = this.rowRangeForFoldAtBufferRow(currentRow)) != null ? _ref1 : [], startRow = _ref2[0], endRow = _ref2[1];
+        _ref1 = (_ref = this.rowRangeForFoldAtBufferRow(currentRow)) != null ? _ref : [], startRow = _ref1[0], endRow = _ref1[1];
         if (!((startRow != null) && (startRow <= bufferRow && bufferRow <= endRow))) {
           continue;
         }
@@ -177,14 +160,14 @@
     };
 
     LanguageMode.prototype.rowRangeForCommentAtBufferRow = function(bufferRow) {
-      var currentRow, endRow, startRow, _i, _j, _ref1, _ref2, _ref3;
+      var currentRow, endRow, startRow, _i, _j, _ref, _ref1, _ref2;
       if (!this.editor.displayBuffer.tokenizedBuffer.tokenizedLineForRow(bufferRow).isComment()) {
         return;
       }
       startRow = bufferRow;
       endRow = bufferRow;
       if (bufferRow > 0) {
-        for (currentRow = _i = _ref1 = bufferRow - 1; _ref1 <= 0 ? _i <= 0 : _i >= 0; currentRow = _ref1 <= 0 ? ++_i : --_i) {
+        for (currentRow = _i = _ref = bufferRow - 1; _ref <= 0 ? _i <= 0 : _i >= 0; currentRow = _ref <= 0 ? ++_i : --_i) {
           if (this.buffer.isRowBlank(currentRow)) {
             break;
           }
@@ -195,7 +178,7 @@
         }
       }
       if (bufferRow < this.buffer.getLastRow()) {
-        for (currentRow = _j = _ref2 = bufferRow + 1, _ref3 = this.buffer.getLastRow(); _ref2 <= _ref3 ? _j <= _ref3 : _j >= _ref3; currentRow = _ref2 <= _ref3 ? ++_j : --_j) {
+        for (currentRow = _j = _ref1 = bufferRow + 1, _ref2 = this.buffer.getLastRow(); _ref1 <= _ref2 ? _j <= _ref2 : _j >= _ref2; currentRow = _ref1 <= _ref2 ? ++_j : --_j) {
           if (this.buffer.isRowBlank(currentRow)) {
             break;
           }
@@ -211,19 +194,19 @@
     };
 
     LanguageMode.prototype.rowRangeForCodeFoldAtBufferRow = function(bufferRow) {
-      var foldEndRow, includeRowInFold, indentation, row, scopeDescriptor, startIndentLevel, _i, _ref1, _ref2, _ref3;
+      var foldEndRow, includeRowInFold, indentation, row, scopeDescriptor, startIndentLevel, _i, _ref, _ref1, _ref2;
       if (!this.isFoldableAtBufferRow(bufferRow)) {
         return null;
       }
       startIndentLevel = this.editor.indentationForBufferRow(bufferRow);
       scopeDescriptor = this.editor.scopeDescriptorForBufferPosition([bufferRow, 0]);
-      for (row = _i = _ref1 = bufferRow + 1, _ref2 = this.editor.getLastBufferRow(); _ref1 <= _ref2 ? _i <= _ref2 : _i >= _ref2; row = _ref1 <= _ref2 ? ++_i : --_i) {
+      for (row = _i = _ref = bufferRow + 1, _ref1 = this.editor.getLastBufferRow(); _ref <= _ref1 ? _i <= _ref1 : _i >= _ref1; row = _ref <= _ref1 ? ++_i : --_i) {
         if (this.editor.isBufferRowBlank(row)) {
           continue;
         }
         indentation = this.editor.indentationForBufferRow(row);
         if (indentation <= startIndentLevel) {
-          includeRowInFold = indentation === startIndentLevel && ((_ref3 = this.foldEndRegexForScopeDescriptor(scopeDescriptor)) != null ? _ref3.searchSync(this.editor.lineTextForBufferRow(row)) : void 0);
+          includeRowInFold = indentation === startIndentLevel && ((_ref2 = this.foldEndRegexForScopeDescriptor(scopeDescriptor)) != null ? _ref2.searchSync(this.editor.lineTextForBufferRow(row)) : void 0);
           if (includeRowInFold) {
             foldEndRow = row;
           }
@@ -246,8 +229,25 @@
     };
 
     LanguageMode.prototype.rowRangeForParagraphAtBufferRow = function(bufferRow) {
-      var endRow, firstRow, isOriginalRowComment, lastRow, range, startRow, _ref1, _ref2;
-      if (!/\w/.test(this.editor.lineTextForBufferRow(bufferRow))) {
+      var commentEndString, commentStartRegex, commentStartRegexString, commentStartString, endRow, filterCommentStart, firstRow, isOriginalRowComment, lastRow, range, scope, startRow, _ref, _ref1, _ref2;
+      scope = this.editor.scopeDescriptorForBufferPosition([bufferRow, 0]);
+      _ref = this.commentStartAndEndStringsForScope(scope), commentStartString = _ref.commentStartString, commentEndString = _ref.commentEndString;
+      commentStartRegex = null;
+      if ((commentStartString != null) && (commentEndString == null)) {
+        commentStartRegexString = _.escapeRegExp(commentStartString).replace(/(\s+)$/, '(?:$1)?');
+        commentStartRegex = new OnigRegExp("^(\\s*)(" + commentStartRegexString + ")");
+      }
+      filterCommentStart = function(line) {
+        var matches;
+        if (commentStartRegex != null) {
+          matches = commentStartRegex.searchSync(line);
+          if (matches != null ? matches.length : void 0) {
+            line = line.substring(matches[0].end);
+          }
+        }
+        return line;
+      };
+      if (!/\S/.test(filterCommentStart(this.editor.lineTextForBufferRow(bufferRow)))) {
         return;
       }
       if (this.isLineCommentedAtBufferRow(bufferRow)) {
@@ -263,7 +263,7 @@
         if (this.isLineCommentedAtBufferRow(startRow - 1) !== isOriginalRowComment) {
           break;
         }
-        if (!/\w/.test(this.editor.lineTextForBufferRow(startRow - 1))) {
+        if (!/\S/.test(filterCommentStart(this.editor.lineTextForBufferRow(startRow - 1)))) {
           break;
         }
         startRow--;
@@ -274,7 +274,7 @@
         if (this.isLineCommentedAtBufferRow(endRow + 1) !== isOriginalRowComment) {
           break;
         }
-        if (!/\w/.test(this.editor.lineTextForBufferRow(endRow + 1))) {
+        if (!/\S/.test(filterCommentStart(this.editor.lineTextForBufferRow(endRow + 1)))) {
           break;
         }
         endRow++;
@@ -295,7 +295,7 @@
     };
 
     LanguageMode.prototype.suggestedIndentForTokenizedLineAtBufferRow = function(bufferRow, tokenizedLine, options) {
-      var currentIndentLevel, decreaseIndentRegex, desiredIndentLevel, increaseIndentRegex, precedingLine, precedingRow, scopeDescriptor, scopes, _ref1;
+      var currentIndentLevel, decreaseIndentRegex, desiredIndentLevel, increaseIndentRegex, precedingLine, precedingRow, scopeDescriptor, scopes, _ref;
       scopes = tokenizedLine.tokens[0].scopes;
       scopeDescriptor = new ScopeDescriptor({
         scopes: scopes
@@ -304,7 +304,7 @@
       if (!(increaseIndentRegex = this.increaseIndentRegexForScopeDescriptor(scopeDescriptor))) {
         return currentIndentLevel;
       }
-      if ((_ref1 = options != null ? options.skipBlankLines : void 0) != null ? _ref1 : true) {
+      if ((_ref = options != null ? options.skipBlankLines : void 0) != null ? _ref : true) {
         precedingRow = this.buffer.previousNonBlankRow(bufferRow);
         if (precedingRow == null) {
           return 0;
@@ -409,6 +409,24 @@
 
     LanguageMode.prototype.foldEndRegexForScopeDescriptor = function(scopeDescriptor) {
       return this.getRegexForProperty(scopeDescriptor, 'editor.foldEndPattern');
+    };
+
+    LanguageMode.prototype.commentStartAndEndStringsForScope = function(scope) {
+      var commentEndEntry, commentEndString, commentStartEntry, commentStartString;
+      commentStartEntry = atom.config.getAll('editor.commentStart', {
+        scope: scope
+      })[0];
+      commentEndEntry = _.find(atom.config.getAll('editor.commentEnd', {
+        scope: scope
+      }), function(entry) {
+        return entry.scopeSelector === commentStartEntry.scopeSelector;
+      });
+      commentStartString = commentStartEntry != null ? commentStartEntry.value : void 0;
+      commentEndString = commentEndEntry != null ? commentEndEntry.value : void 0;
+      return {
+        commentStartString: commentStartString,
+        commentEndString: commentEndString
+      };
     };
 
     return LanguageMode;

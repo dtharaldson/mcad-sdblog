@@ -1,5 +1,5 @@
 (function() {
-  var CSON, CompositeDisposable, Emitter, EmitterMixin, ModuleCache, Package, Q, ScopedProperties, async, deprecate, error, fs, includeDeprecatedAPIs, packagesCache, path, _, _ref, _ref1, _ref2, _ref3,
+  var CSON, CompositeDisposable, Emitter, EmitterMixin, ModuleCache, Package, Q, ScopedProperties, async, deprecate, fs, includeDeprecatedAPIs, packagesCache, path, _, _ref, _ref1, _ref2, _ref3,
     __slice = [].slice;
 
   path = require('path');
@@ -22,12 +22,7 @@
 
   ScopedProperties = require('./scoped-properties');
 
-  try {
-    packagesCache = (_ref2 = (_ref3 = require('../package.json')) != null ? _ref3._atomPackages : void 0) != null ? _ref2 : {};
-  } catch (_error) {
-    error = _error;
-    packagesCache = {};
-  }
+  packagesCache = (_ref2 = (_ref3 = require('../package.json')) != null ? _ref3._atomPackages : void 0) != null ? _ref2 : {};
 
   module.exports = Package = (function() {
     Package.isBundledPackagePath = function(packagePath) {
@@ -43,7 +38,7 @@
     };
 
     Package.loadMetadata = function(packagePath, ignoreErrors) {
-      var metadata, metadataPath, packageName, _ref4;
+      var error, metadata, metadataPath, packageName, _ref4;
       if (ignoreErrors == null) {
         ignoreErrors = false;
       }
@@ -165,6 +160,7 @@
     Package.prototype.load = function() {
       this.measure('loadTime', (function(_this) {
         return function() {
+          var error;
           try {
             _this.loadKeymaps();
             _this.loadMenus();
@@ -198,6 +194,7 @@
         this.activationDeferred = Q.defer();
         this.measure('activateTime', (function(_this) {
           return function() {
+            var error;
             try {
               _this.activateResources();
               if (_this.hasActivationCommands()) {
@@ -216,7 +213,7 @@
     };
 
     Package.prototype.activateNow = function() {
-      var _base, _ref4, _ref5;
+      var error, _base, _ref4, _ref5;
       try {
         this.activateConfig();
         this.activateStylesheets();
@@ -284,7 +281,7 @@
     };
 
     Package.prototype.activateResources = function() {
-      var grammar, keymapPath, map, menuPath, settings, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref10, _ref11, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
+      var error, grammar, keymapPath, map, menuPath, settings, _i, _j, _k, _l, _len, _len1, _len2, _len3, _len4, _m, _ref10, _ref11, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9;
       this.activationDisposables = new CompositeDisposable;
       _ref4 = this.keymaps;
       for (_i = 0, _len = _ref4.length; _i < _len; _i++) {
@@ -456,7 +453,7 @@
     };
 
     Package.prototype.loadGrammarsSync = function() {
-      var grammar, grammarPath, grammarPaths, grammarsDirPath, _i, _len, _ref4;
+      var error, grammar, grammarPath, grammarPaths, grammarsDirPath, _i, _len, _ref4;
       if (this.grammarsLoaded) {
         return;
       }
@@ -704,7 +701,7 @@
         commands = _ref4[selector];
         _fn = (function(_this) {
           return function(selector, command) {
-            var metadataPath;
+            var error, metadataPath;
             try {
               _this.activationCommandSubscriptions.add(atom.commands.add(selector, command, function() {}));
             } catch (_error) {
@@ -795,6 +792,7 @@
     };
 
     Package.prototype.isNativeModule = function(modulePath) {
+      var error;
       try {
         return fs.listSync(path.join(modulePath, 'build', 'Release'), ['.node']).length > 0;
       } catch (_error) {
@@ -826,7 +824,7 @@
     };
 
     Package.prototype.getIncompatibleNativeModules = function() {
-      var incompatibleNativeModules, localStorageKey, nativeModulePath, version, _i, _len, _ref4, _ref5;
+      var error, incompatibleNativeModules, localStorageKey, nativeModulePath, version, _i, _len, _ref4, _ref5;
       localStorageKey = "installed-packages:" + this.name + ":" + this.metadata.version;
       if (!atom.inDevMode()) {
         try {

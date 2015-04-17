@@ -23,7 +23,7 @@
         },
         followSymlinks: {
           type: 'boolean',
-          "default": false,
+          "default": true,
           title: 'Follow symlinks',
           description: 'Used when searching and when opening files with the fuzzy finder.'
         },
@@ -80,10 +80,7 @@
           type: ['string', 'null']
         },
         completions: {
-          type: "array",
-          items: {
-            type: "string"
-          },
+          type: ['array', 'object'],
           "default": []
         },
         fontFamily: {

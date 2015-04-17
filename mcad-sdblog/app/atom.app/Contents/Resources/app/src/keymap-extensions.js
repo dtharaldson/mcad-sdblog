@@ -1,5 +1,5 @@
 (function() {
-  var CSON, Grim, KeymapManager, fs, jQuery, path;
+  var CSON, Grim, KeymapManager, bundledKeymaps, fs, jQuery, path, _ref;
 
   fs = require('fs-plus');
 
@@ -13,12 +13,24 @@
 
   Grim = require('grim');
 
+  bundledKeymaps = (_ref = require('../package.json')) != null ? _ref._atomKeymaps : void 0;
+
   KeymapManager.prototype.onDidLoadBundledKeymaps = function(callback) {
     return this.emitter.on('did-load-bundled-keymaps', callback);
   };
 
   KeymapManager.prototype.loadBundledKeymaps = function() {
-    this.loadKeymap(path.join(this.resourcePath, 'keymaps'));
+    var keymap, keymapName, keymapPath, keymapsPath;
+    keymapsPath = path.join(this.resourcePath, 'keymaps');
+    if (bundledKeymaps != null) {
+      for (keymapName in bundledKeymaps) {
+        keymap = bundledKeymaps[keymapName];
+        keymapPath = path.join(keymapsPath, keymapName);
+        this.add(keymapPath, keymap);
+      }
+    } else {
+      this.loadKeymap(keymapsPath);
+    }
     if (Grim.includeDeprecatedAPIs) {
       this.emit('bundled-keymaps-loaded');
     }
@@ -80,8 +92,8 @@
   };
 
   jQuery.Event.prototype.abortKeyBinding = function() {
-    var _ref;
-    return (_ref = this.originalEvent) != null ? typeof _ref.abortKeyBinding === "function" ? _ref.abortKeyBinding() : void 0 : void 0;
+    var _ref1;
+    return (_ref1 = this.originalEvent) != null ? typeof _ref1.abortKeyBinding === "function" ? _ref1.abortKeyBinding() : void 0 : void 0;
   };
 
   module.exports = KeymapManager;

@@ -774,7 +774,7 @@
         return function(event) {
           var selection;
           if ((event != null ? event.which : void 0) === 2 && process.platform === 'linux') {
-            if (selection = require('clipboard').readText('selection')) {
+            if (selection = require('./safe-clipboard').readText('selection')) {
               return _this.editor.insertText(selection);
             }
           }

@@ -459,7 +459,7 @@
       clipboard = null;
       return ipc.on('write-text-to-selection-clipboard', function(event, selectedText) {
         if (clipboard == null) {
-          clipboard = require('clipboard');
+          clipboard = require('../safe-clipboard');
         }
         return clipboard.writeText(selectedText, 'selection');
       });

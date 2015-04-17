@@ -1,13 +1,15 @@
 (function() {
-  var $, $$, $$$, CompositeDisposable, Disposable, Emitter, Point, Range, TextBuffer, View, deprecate, includeDeprecatedAPIs, _ref, _ref1, _ref2;
+  var $, $$, $$$, CompositeDisposable, Directory, Disposable, Emitter, File, Point, Range, TextBuffer, View, deprecate, includeDeprecatedAPIs, _ref, _ref1, _ref2, _ref3;
 
   TextBuffer = require('text-buffer');
 
   Point = TextBuffer.Point, Range = TextBuffer.Range;
 
-  _ref = require('event-kit'), Emitter = _ref.Emitter, Disposable = _ref.Disposable, CompositeDisposable = _ref.CompositeDisposable;
+  _ref = require('pathwatcher'), File = _ref.File, Directory = _ref.Directory;
 
-  _ref1 = require('grim'), includeDeprecatedAPIs = _ref1.includeDeprecatedAPIs, deprecate = _ref1.deprecate;
+  _ref1 = require('event-kit'), Emitter = _ref1.Emitter, Disposable = _ref1.Disposable, CompositeDisposable = _ref1.CompositeDisposable;
+
+  _ref2 = require('grim'), includeDeprecatedAPIs = _ref2.includeDeprecatedAPIs, deprecate = _ref2.deprecate;
 
   module.exports = {
     BufferedNodeProcess: require('../src/buffered-node-process'),
@@ -17,6 +19,8 @@
     TextBuffer: TextBuffer,
     Point: Point,
     Range: Range,
+    File: File,
+    Directory: Directory,
     Emitter: Emitter,
     Disposable: Disposable,
     CompositeDisposable: CompositeDisposable
@@ -26,7 +30,7 @@
     module.exports.Task = require('../src/task');
     module.exports.TextEditor = require('../src/text-editor');
     if (includeDeprecatedAPIs) {
-      _ref2 = require('../src/space-pen-extensions'), $ = _ref2.$, $$ = _ref2.$$, $$$ = _ref2.$$$, View = _ref2.View;
+      _ref3 = require('../src/space-pen-extensions'), $ = _ref3.$, $$ = _ref3.$$, $$$ = _ref3.$$$, View = _ref3.View;
       Object.defineProperty(module.exports, 'Workspace', {
         get: function() {
           deprecate("Requiring `Workspace` from `atom` is no longer supported.\nIf you need this, please open an issue on\nhttps://github.com/atom/atom/issues/new\nAnd let us know what you are using it for.");

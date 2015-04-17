@@ -15,8 +15,6 @@
 
   _ref = require('grim'), includeDeprecatedAPIs = _ref.includeDeprecatedAPIs, deprecate = _ref.deprecate;
 
-  EmitterMixin = require('emissary').Emitter;
-
   _ref1 = require('event-kit'), CompositeDisposable = _ref1.CompositeDisposable, Emitter = _ref1.Emitter;
 
   _ref2 = TextBuffer = require('text-buffer'), Point = _ref2.Point, Range = _ref2.Range;
@@ -2963,6 +2961,7 @@
       deprecate("Use TextEditor::isSoftWrapped instead");
       return this.displayBuffer.isSoftWrapped();
     };
+    EmitterMixin = require('emissary').Emitter;
     TextEditor.prototype.on = function(eventName) {
       switch (eventName) {
         case 'title-changed':

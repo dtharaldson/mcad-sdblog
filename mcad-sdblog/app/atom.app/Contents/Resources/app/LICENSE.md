@@ -459,7 +459,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: ast-types@0.7.2
+Package: ast-types@0.7.6
 License: MIT
 License Source: LICENSE
 Source Text:
@@ -630,7 +630,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: atom-keymap@5.1.0
+Package: atom-keymap@5.1.2
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -804,7 +804,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: atom@0.190.0
+Package: atom@0.191.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -1541,7 +1541,7 @@ DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: clear-cut@0.4.0
+Package: clear-cut@2.0.1
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -2087,7 +2087,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: commander@2.7.1
+Package: commander@2.8.0
 License: MIT
 License Source: LICENSE
 Source Text:
@@ -2510,7 +2510,7 @@ Clones the current set of dependencies into its own object.
 
 -------------------------------------------------------------------------
 
-Package: deprecation-cop@0.39.0
+Package: deprecation-cop@0.40.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -2821,33 +2821,6 @@ THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: es6-symbol@0.1.1
-License: MIT
-License Source: LICENCE
-Source Text:
-
-Copyright (C) 2013 Mariusz Nowak (www.medikoo.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
--------------------------------------------------------------------------
-
 Package: es6-symbol@2.0.1
 License: MIT
 License Source: LICENSE
@@ -2875,7 +2848,7 @@ THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: es6-weak-map@0.1.2
+Package: es6-weak-map@0.1.4
 License: MIT
 License Source: LICENCE
 Source Text:
@@ -2937,7 +2910,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: esprima-fb@13001.1001.0-dev-harmony-fb
+Package: esprima-fb@14001.1.0-dev-harmony-fb
 License: BSD
 License Source: package.json
 
@@ -3485,7 +3458,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: fuzzy-finder@0.72.0
+Package: fuzzy-finder@0.73.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -4076,7 +4049,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -------------------------------------------------------------------------
 
-Package: iconv-lite@0.4.7
+Package: iconv-lite@0.4.8
 License: MIT
 License Source: LICENSE
 Source Text:
@@ -4939,7 +4912,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: keybinding-resolver@0.30.0
+Package: keybinding-resolver@0.31.0
 License: MIT
 License Source: LICENSE
 Source Text:
@@ -5075,7 +5048,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: language-gfm@0.67.0
+Package: language-gfm@0.68.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -5115,7 +5088,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: language-html@0.31.0
+Package: language-html@0.32.0
 License: MIT
 License Source: package.json
 
@@ -5133,7 +5106,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: language-javascript@0.70.0
+Package: language-javascript@0.73.0
 License: MIT
 License Source: package.json
 
@@ -5209,7 +5182,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: language-python@0.33.0
+Package: language-python@0.34.0
 License: MIT
 License Source: package.json
 
@@ -5221,7 +5194,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: language-ruby@0.51.0
+Package: language-ruby@0.52.0
 License: MIT
 License Source: package.json
 
@@ -5257,7 +5230,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: language-todo@0.17.0
+Package: language-todo@0.18.0
 License: MIT
 License Source: package.json
 
@@ -5672,7 +5645,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: lru-cache@2.5.0
+Package: lru-cache@2.5.2
 License: MIT
 License Source: LICENSE
 Source Text:
@@ -6296,7 +6269,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 -------------------------------------------------------------------------
 
-Package: moment@2.10.0
+Package: moment@2.10.2
 License: MIT
 License Source: LICENSE
 Source Text:
@@ -6487,7 +6460,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: notifications@0.36.0
+Package: notifications@0.37.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -6680,7 +6653,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: one-dark-ui@0.6.2
+Package: one-dark-ui@0.6.3
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -6736,7 +6709,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: one-light-ui@0.5.2
+Package: one-light-ui@0.5.3
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -7542,7 +7515,7 @@ IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: recast@0.10.11
+Package: recast@0.10.12
 License: MIT
 License Source: LICENSE
 Source Text:
@@ -7876,7 +7849,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: scandal@2.0.0
+Package: scandal@2.0.1
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -8079,7 +8052,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: settings-view@0.187.0
+Package: settings-view@0.192.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -8550,7 +8523,7 @@ THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: status-bar@0.67.0
+Package: status-bar@0.68.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -8705,7 +8678,7 @@ THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: symbols-view@0.93.0
+Package: symbols-view@0.94.0
 License: MIT
 License Source: LICENSE.md
 Source Text:

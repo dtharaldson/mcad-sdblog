@@ -773,7 +773,9 @@
       startTime = Date.now();
       this.workspace = (_ref3 = Workspace.deserialize(this.state.workspace)) != null ? _ref3 : new Workspace;
       workspaceElement = this.views.getView(this.workspace);
-      this.__workspaceView = workspaceElement.__spacePenView;
+      if (includeDeprecatedAPIs) {
+        this.__workspaceView = workspaceElement.__spacePenView;
+      }
       this.deserializeTimings.workspace = Date.now() - startTime;
       this.keymaps.defaultTarget = workspaceElement;
       return document.querySelector(this.workspaceViewParentSelector).appendChild(workspaceElement);

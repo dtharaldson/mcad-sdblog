@@ -34,6 +34,10 @@
       }).join(' ');
     };
 
+    ScopeDescriptor.prototype.toString = function() {
+      return this.getScopeChain();
+    };
+
     return ScopeDescriptor;
 
   })();

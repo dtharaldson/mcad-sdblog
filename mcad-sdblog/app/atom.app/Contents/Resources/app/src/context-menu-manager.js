@@ -1,5 +1,5 @@
 (function() {
-  var CSON, ContextMenuItemSet, ContextMenuManager, Disposable, Grim, MenuHelpers, SpecificityCache, fs, path, specificity, validateSelector, _;
+  var CSON, ContextMenuItemSet, ContextMenuManager, Disposable, Grim, MenuHelpers, calculateSpecificity, fs, path, platformContextMenu, validateSelector, _, _ref, _ref1, _ref2;
 
   _ = require('underscore-plus');
 
@@ -9,7 +9,7 @@
 
   fs = require('fs-plus');
 
-  specificity = require('clear-cut').specificity;
+  _ref = require('clear-cut'), calculateSpecificity = _ref.calculateSpecificity, validateSelector = _ref.validateSelector;
 
   Disposable = require('event-kit').Disposable;
 
@@ -17,9 +17,7 @@
 
   MenuHelpers = require('./menu-helpers');
 
-  validateSelector = require('./selector-validator').validateSelector;
-
-  SpecificityCache = {};
+  platformContextMenu = (_ref1 = require('../package.json')) != null ? (_ref2 = _ref1._atomMenu) != null ? _ref2['context-menu'] : void 0 : void 0;
 
   module.exports = ContextMenuManager = (function() {
     function ContextMenuManager(_arg) {
@@ -37,19 +35,23 @@
 
     ContextMenuManager.prototype.loadPlatformItems = function() {
       var map, menusDirPath, platformMenuPath;
-      menusDirPath = path.join(this.resourcePath, 'menus');
-      platformMenuPath = fs.resolve(menusDirPath, process.platform, ['cson', 'json']);
-      map = CSON.readFileSync(platformMenuPath);
-      return atom.contextMenu.add(map['context-menu']);
+      if (platformContextMenu != null) {
+        return this.add(platformContextMenu);
+      } else {
+        menusDirPath = path.join(this.resourcePath, 'menus');
+        platformMenuPath = fs.resolve(menusDirPath, process.platform, ['cson', 'json']);
+        map = CSON.readFileSync(platformMenuPath);
+        return this.add(map['context-menu']);
+      }
     };
 
     ContextMenuManager.prototype.add = function(itemsBySelector) {
-      var addedItemSets, devMode, itemSet, items, key, selector, value, _ref;
+      var addedItemSets, devMode, itemSet, items, key, selector, value, _ref3;
       if (Grim.includeDeprecatedAPIs) {
         if ((itemsBySelector != null) && typeof itemsBySelector !== 'object') {
           Grim.deprecate("ContextMenuManager::add has changed to take a single object as its\nargument. Please see\nhttps://atom.io/docs/api/latest/ContextMenuManager for more info.");
           itemsBySelector = arguments[1];
-          devMode = (_ref = arguments[2]) != null ? _ref.devMode : void 0;
+          devMode = (_ref3 = arguments[2]) != null ? _ref3.devMode : void 0;
         }
         for (key in itemsBySelector) {
           value = itemsBySelector[key];
@@ -85,7 +87,7 @@
     };
 
     ContextMenuManager.prototype.templateForEvent = function(event) {
-      var currentTarget, currentTargetItems, item, itemSet, matchingItemSets, template, _i, _j, _k, _len, _len1, _len2, _ref;
+      var currentTarget, currentTargetItems, item, itemSet, matchingItemSets, template, _i, _j, _k, _len, _len1, _len2, _ref3;
       template = [];
       currentTarget = event.target;
       while (currentTarget != null) {
@@ -95,9 +97,9 @@
         });
         for (_i = 0, _len = matchingItemSets.length; _i < _len; _i++) {
           itemSet = matchingItemSets[_i];
-          _ref = itemSet.items;
-          for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
-            item = _ref[_j];
+          _ref3 = itemSet.items;
+          for (_j = 0, _len1 = _ref3.length; _j < _len1; _j++) {
+            item = _ref3[_j];
             if (item.devMode && !this.devMode) {
               continue;
             }
@@ -196,10 +198,9 @@
 
   ContextMenuItemSet = (function() {
     function ContextMenuItemSet(selector, items) {
-      var _name;
       this.selector = selector;
       this.items = items;
-      this.specificity = (SpecificityCache[_name = this.selector] != null ? SpecificityCache[_name] : SpecificityCache[_name] = specificity(this.selector));
+      this.specificity = calculateSpecificity(this.selector);
     }
 
     return ContextMenuItemSet;

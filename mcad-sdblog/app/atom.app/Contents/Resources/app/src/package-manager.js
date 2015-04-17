@@ -259,11 +259,10 @@
     };
 
     PackageManager.prototype.getPackageDependencies = function() {
-      var metadataPath, _ref;
+      var _ref;
       if (this.packageDependencies == null) {
         try {
-          metadataPath = path.join(this.resourcePath, 'package.json');
-          this.packageDependencies = ((_ref = JSON.parse(fs.readFileSync(metadataPath))) != null ? _ref : {}).packageDependencies;
+          this.packageDependencies = (_ref = require('../package.json')) != null ? _ref.packageDependencies : void 0;
         } catch (_error) {}
         if (this.packageDependencies == null) {
           this.packageDependencies = {};

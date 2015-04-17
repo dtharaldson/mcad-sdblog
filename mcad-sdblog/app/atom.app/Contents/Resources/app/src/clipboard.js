@@ -3,7 +3,7 @@
 
   crypto = require('crypto');
 
-  clipboard = process.platform === 'linux' ? require('remote').require('clipboard') : require('clipboard');
+  clipboard = require('./safe-clipboard');
 
   module.exports = Clipboard = (function() {
     function Clipboard() {}

@@ -1,5 +1,5 @@
 (function() {
-  var CSON, Disposable, MenuHelpers, MenuManager, fs, ipc, path, _;
+  var CSON, Disposable, MenuHelpers, MenuManager, fs, ipc, path, platformMenu, _, _ref, _ref1;
 
   path = require('path');
 
@@ -14,6 +14,8 @@
   Disposable = require('event-kit').Disposable;
 
   MenuHelpers = require('./menu-helpers');
+
+  platformMenu = (_ref = require('../package.json')) != null ? (_ref1 = _ref._atomMenu) != null ? _ref1.menu : void 0 : void 0;
 
   module.exports = MenuManager = (function() {
     function MenuManager(_arg) {
@@ -57,7 +59,7 @@
     };
 
     MenuManager.prototype.includeSelector = function(selector) {
-      var element, error, testBody, testDocument, testWorkspace, workspaceClasses, _ref, _ref1;
+      var element, error, testBody, testDocument, testWorkspace, workspaceClasses, _ref2, _ref3;
       try {
         if (document.body.webkitMatchesSelector(selector)) {
           return true;
@@ -69,13 +71,13 @@
       if (this.testEditor == null) {
         testDocument = document.implementation.createDocument(document.namespaceURI, 'html');
         testBody = testDocument.createElement('body');
-        (_ref = testBody.classList).add.apply(_ref, this.classesForElement(document.body));
+        (_ref2 = testBody.classList).add.apply(_ref2, this.classesForElement(document.body));
         testWorkspace = testDocument.createElement('atom-workspace');
         workspaceClasses = this.classesForElement(document.body.querySelector('atom-workspace'));
         if (workspaceClasses.length === 0) {
           workspaceClasses = ['workspace'];
         }
-        (_ref1 = testWorkspace.classList).add.apply(_ref1, workspaceClasses);
+        (_ref3 = testWorkspace.classList).add.apply(_ref3, workspaceClasses);
         testBody.appendChild(testWorkspace);
         this.testEditor = testDocument.createElement('atom-text-editor');
         this.testEditor.classList.add('editor');
@@ -97,11 +99,11 @@
       }
       return this.pendingUpdateOperation = setImmediate((function(_this) {
         return function() {
-          var binding, keystrokesByCommand, _i, _len, _name, _ref;
+          var binding, keystrokesByCommand, _i, _len, _name, _ref2;
           keystrokesByCommand = {};
-          _ref = atom.keymaps.getKeyBindings();
-          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-            binding = _ref[_i];
+          _ref2 = atom.keymaps.getKeyBindings();
+          for (_i = 0, _len = _ref2.length; _i < _len; _i++) {
+            binding = _ref2[_i];
             if (!(_this.includeSelector(binding.selector))) {
               continue;
             }
@@ -117,10 +119,14 @@
 
     MenuManager.prototype.loadPlatformItems = function() {
       var menu, menusDirPath, platformMenuPath;
-      menusDirPath = path.join(this.resourcePath, 'menus');
-      platformMenuPath = fs.resolve(menusDirPath, process.platform, ['cson', 'json']);
-      menu = CSON.readFileSync(platformMenuPath).menu;
-      return this.add(menu);
+      if (platformMenu != null) {
+        return this.add(platformMenu);
+      } else {
+        menusDirPath = path.join(this.resourcePath, 'menus');
+        platformMenuPath = fs.resolve(menusDirPath, process.platform, ['cson', 'json']);
+        menu = CSON.readFileSync(platformMenuPath).menu;
+        return this.add(menu);
+      }
     };
 
     MenuManager.prototype.merge = function(menu, item) {
@@ -156,8 +162,8 @@
     };
 
     MenuManager.prototype.classesForElement = function(element) {
-      var _ref;
-      return (_ref = element != null ? element.classList.toString().split(' ') : void 0) != null ? _ref : [];
+      var _ref2;
+      return (_ref2 = element != null ? element.classList.toString().split(' ') : void 0) != null ? _ref2 : [];
     };
 
     MenuManager.prototype.sortPackagesMenu = function() {

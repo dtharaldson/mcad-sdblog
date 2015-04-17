@@ -5,8 +5,6 @@
 
   fs = require('fs-plus');
 
-  EmitterMixin = require('emissary').Emitter;
-
   _ref = require('event-kit'), CompositeDisposable = _ref.CompositeDisposable, Disposable = _ref.Disposable, Emitter = _ref.Emitter;
 
   CSON = require('season');
@@ -26,8 +24,6 @@
   ScopeDescriptor = require('./scope-descriptor');
 
   module.exports = Config = (function() {
-    EmitterMixin.includeInto(Config);
-
     Config.schemaEnforcers = {};
 
     Config.addSchemaEnforcer = function(typeName, enforcerFunction) {
@@ -991,6 +987,8 @@
   };
 
   if (Grim.includeDeprecatedAPIs) {
+    EmitterMixin = require('emissary').Emitter;
+    EmitterMixin.includeInto(Config);
     Config.prototype.restoreDefault = function(scopeSelector, keyPath) {
       Grim.deprecate("Use ::unset instead.");
       this.unset(scopeSelector, keyPath);

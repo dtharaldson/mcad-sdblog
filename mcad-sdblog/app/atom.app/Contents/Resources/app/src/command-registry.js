@@ -1,20 +1,16 @@
 (function() {
-  var $, CommandRegistry, CompositeDisposable, Disposable, Emitter, InlineListener, SelectorBasedListener, SequenceCount, SpecificityCache, specificity, validateSelector, _, _ref,
+  var $, CommandRegistry, CompositeDisposable, Disposable, Emitter, InlineListener, SelectorBasedListener, SequenceCount, calculateSpecificity, validateSelector, _, _ref, _ref1,
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   _ref = require('event-kit'), Emitter = _ref.Emitter, Disposable = _ref.Disposable, CompositeDisposable = _ref.CompositeDisposable;
 
-  specificity = require('clear-cut').specificity;
+  _ref1 = require('clear-cut'), calculateSpecificity = _ref1.calculateSpecificity, validateSelector = _ref1.validateSelector;
 
   _ = require('underscore-plus');
 
   $ = require('./space-pen-extensions').$;
 
-  validateSelector = require('./selector-validator').validateSelector;
-
   SequenceCount = 0;
-
-  SpecificityCache = {};
 
   module.exports = CommandRegistry = (function() {
     function CommandRegistry(rootNode) {
@@ -93,15 +89,15 @@
     };
 
     CommandRegistry.prototype.findCommands = function(_arg) {
-      var commandName, commandNames, commands, currentTarget, listener, listeners, name, target, _i, _len, _ref1, _ref2, _ref3;
+      var commandName, commandNames, commands, currentTarget, listener, listeners, name, target, _i, _len, _ref2, _ref3, _ref4;
       target = _arg.target;
       commandNames = new Set;
       commands = [];
       currentTarget = target;
       while (true) {
-        _ref1 = this.inlineListenersByCommandName;
-        for (name in _ref1) {
-          listeners = _ref1[name];
+        _ref2 = this.inlineListenersByCommandName;
+        for (name in _ref2) {
+          listeners = _ref2[name];
           if (listeners.has(currentTarget) && !commandNames.has(name)) {
             commandNames.add(name);
             commands.push({
@@ -110,9 +106,9 @@
             });
           }
         }
-        _ref2 = this.selectorBasedListenersByCommandName;
-        for (commandName in _ref2) {
-          listeners = _ref2[commandName];
+        _ref3 = this.selectorBasedListenersByCommandName;
+        for (commandName in _ref3) {
+          listeners = _ref3[commandName];
           for (_i = 0, _len = listeners.length; _i < _len; _i++) {
             listener = listeners[_i];
             if (typeof currentTarget.webkitMatchesSelector === "function" ? currentTarget.webkitMatchesSelector(listener.selector) : void 0) {
@@ -129,7 +125,7 @@
         if (currentTarget === window) {
           break;
         }
-        currentTarget = (_ref3 = currentTarget.parentNode) != null ? _ref3 : window;
+        currentTarget = (_ref4 = currentTarget.parentNode) != null ? _ref4 : window;
       }
       return commands;
     };
@@ -162,11 +158,11 @@
     };
 
     CommandRegistry.prototype.getSnapshot = function() {
-      var commandName, listeners, snapshot, _ref1;
+      var commandName, listeners, snapshot, _ref2;
       snapshot = {};
-      _ref1 = this.selectorBasedListenersByCommandName;
-      for (commandName in _ref1) {
-        listeners = _ref1[commandName];
+      _ref2 = this.selectorBasedListenersByCommandName;
+      for (commandName in _ref2) {
+        listeners = _ref2[commandName];
         snapshot[commandName] = listeners.slice();
       }
       return snapshot;
@@ -182,7 +178,7 @@
     };
 
     CommandRegistry.prototype.handleCommandEvent = function(originalEvent) {
-      var currentTarget, immediatePropagationStopped, listener, listeners, matched, propagationStopped, selectorBasedListeners, syntheticEvent, _i, _len, _ref1, _ref2, _ref3, _ref4;
+      var currentTarget, immediatePropagationStopped, listener, listeners, matched, propagationStopped, selectorBasedListeners, syntheticEvent, _i, _len, _ref2, _ref3, _ref4, _ref5;
       propagationStopped = false;
       immediatePropagationStopped = false;
       matched = false;
@@ -222,9 +218,9 @@
       });
       this.emitter.emit('will-dispatch', syntheticEvent);
       while (true) {
-        listeners = (_ref1 = (_ref2 = this.inlineListenersByCommandName[originalEvent.type]) != null ? _ref2.get(currentTarget) : void 0) != null ? _ref1 : [];
+        listeners = (_ref2 = (_ref3 = this.inlineListenersByCommandName[originalEvent.type]) != null ? _ref3.get(currentTarget) : void 0) != null ? _ref2 : [];
         if (currentTarget.webkitMatchesSelector != null) {
-          selectorBasedListeners = ((_ref3 = this.selectorBasedListenersByCommandName[originalEvent.type]) != null ? _ref3 : []).filter(function(listener) {
+          selectorBasedListeners = ((_ref4 = this.selectorBasedListenersByCommandName[originalEvent.type]) != null ? _ref4 : []).filter(function(listener) {
             return currentTarget.webkitMatchesSelector(listener.selector);
           }).sort(function(a, b) {
             return a.compare(b);
@@ -247,7 +243,7 @@
         if (propagationStopped) {
           break;
         }
-        currentTarget = (_ref4 = currentTarget.parentNode) != null ? _ref4 : window;
+        currentTarget = (_ref5 = currentTarget.parentNode) != null ? _ref5 : window;
       }
       return matched;
     };
@@ -265,10 +261,9 @@
 
   SelectorBasedListener = (function() {
     function SelectorBasedListener(selector, callback) {
-      var _name;
       this.selector = selector;
       this.callback = callback;
-      this.specificity = (SpecificityCache[_name = this.selector] != null ? SpecificityCache[_name] : SpecificityCache[_name] = specificity(this.selector));
+      this.specificity = calculateSpecificity(this.selector);
       this.sequenceNumber = SequenceCount++;
     }
 
