@@ -1,0 +1,12 @@
+.article {
+  width: 32%;
+  height: 20em;
+  img {
+    z-index: -10;
+    max-width: none;
+  }
+}
+
+.gradient {
+  background-image: linear-gradient(to bottom, red, #f06d06);
+}
