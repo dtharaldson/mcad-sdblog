@@ -1,7 +1,9 @@
 (function() {
-  var $, CompositeDisposable, Grim, PaneElement, PaneView, callAttachHooks, callRemoveHooks, _ref,
+  var $, CompositeDisposable, Grim, PaneElement, PaneView, callAttachHooks, callRemoveHooks, path, _ref,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  path = require('path');
 
   CompositeDisposable = require('event-kit').CompositeDisposable;
 
@@ -109,12 +111,18 @@
     };
 
     PaneElement.prototype.activeItemChanged = function(item) {
-      var child, hasFocus, itemView, _i, _len, _ref1;
+      var child, hasFocus, itemPath, itemView, _i, _len, _ref1;
+      delete this.dataset.activeItemName;
+      delete this.dataset.activeItemPath;
       if (item == null) {
         return;
       }
       hasFocus = this.hasFocus();
       itemView = atom.views.getView(item);
+      if (itemPath = typeof item.getPath === "function" ? item.getPath() : void 0) {
+        this.dataset.activeItemName = path.basename(itemPath);
+        this.dataset.activeItemPath = itemPath;
+      }
       if (!this.itemViews.contains(itemView)) {
         this.itemViews.appendChild(itemView);
         callAttachHooks(itemView);

@@ -804,7 +804,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: atom@0.191.0
+Package: atom@0.192.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -3458,7 +3458,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: fuzzy-finder@0.73.0
+Package: fuzzy-finder@0.74.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -5048,7 +5048,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: language-gfm@0.68.0
+Package: language-gfm@0.69.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -5082,7 +5082,7 @@ License Source: package.json
 
 -------------------------------------------------------------------------
 
-Package: language-go@0.23.0
+Package: language-go@0.24.0
 License: MIT
 License Source: package.json
 
@@ -6460,7 +6460,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: notifications@0.37.0
+Package: notifications@0.38.0
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -7849,7 +7849,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: scandal@2.0.1
+Package: scandal@2.0.2
 License: MIT
 License Source: LICENSE.md
 Source Text:
@@ -8523,7 +8523,7 @@ THE SOFTWARE.
 
 -------------------------------------------------------------------------
 
-Package: status-bar@0.68.0
+Package: status-bar@0.69.0
 License: MIT
 License Source: LICENSE.md
 Source Text:

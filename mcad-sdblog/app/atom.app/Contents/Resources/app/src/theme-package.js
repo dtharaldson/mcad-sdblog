@@ -31,17 +31,7 @@
     };
 
     ThemePackage.prototype.load = function() {
-      this.measure('loadTime', (function(_this) {
-        return function() {
-          var error, _ref;
-          try {
-            return _this.metadata != null ? _this.metadata : _this.metadata = Package.loadMetadata(_this.path);
-          } catch (_error) {
-            error = _error;
-            return console.warn("Failed to load theme named '" + _this.name + "'", (_ref = error.stack) != null ? _ref : error);
-          }
-        };
-      })(this));
+      this.loadTime = 0;
       return this;
     };
 
@@ -52,8 +42,14 @@
       this.activationDeferred = Q.defer();
       this.measure('activateTime', (function(_this) {
         return function() {
-          _this.loadStylesheets();
-          return _this.activateNow();
+          var error;
+          try {
+            _this.loadStylesheets();
+            return _this.activateNow();
+          } catch (_error) {
+            error = _error;
+            return _this.handleError("Failed to activate the " + _this.name + " theme", error);
+          }
         };
       })(this));
       return this.activationDeferred.promise;

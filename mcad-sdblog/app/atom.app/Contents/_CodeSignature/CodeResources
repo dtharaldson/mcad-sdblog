@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/app/LICENSE.md</key>
 		<data>
-		NGSj2CiFi+n3L0ZCDNbU0eEl0mQ=
+		W0nIj6POnnsw/EMJ0ZfuQVg0kwA=
 		</data>
 		<key>Resources/app/apm/CONTRIBUTING.md</key>
 		<data>
@@ -2374,11 +2374,11 @@
 		</data>
 		<key>Resources/app/apm/node_modules/first-mate/node_modules/oniguruma/build/Release/onig_scanner.node</key>
 		<data>
-		5Ink2Oe5fwd+ib1Ts7ymY//LLRk=
+		JQt97xOOUgVyXonUT6FNeNoTNmw=
 		</data>
 		<key>Resources/app/apm/node_modules/first-mate/node_modules/oniguruma/build/Release/oniguruma.a</key>
 		<data>
-		d4KjyssPbvhRACo3QEVxBwtKWmA=
+		FAEld2NIIouxUdZ265bUdzqrTws=
 		</data>
 		<key>Resources/app/apm/node_modules/first-mate/node_modules/oniguruma/lib/onig-reg-exp.js</key>
 		<data>
@@ -2462,19 +2462,19 @@
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/build/Release/git.node</key>
 		<data>
-		7aP9MGtzFHsQ+VIg/L1KEdaSgi8=
+		3KBIQb0BjlpdLPRByBNPnLOAF6c=
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/build/Release/git2.a</key>
 		<data>
-		t9BpLmA40nhFAy7u9Qqw7rOZZjc=
+		MFbCGKdVMhBhyvZl9fqLkZ5CL84=
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/build/Release/http_parser.a</key>
 		<data>
-		8LdgYP+7bJrgmg4RTfNopbELzlk=
+		mmt3ujn6YteE7DRUi5iQ9+M1AbU=
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/build/Release/zlib.a</key>
 		<data>
-		/wNd3i0H9C8ynA7ROq4XtFBD/s4=
+		nsWCfbu/QPzo6hfq7A+oMHba7Gc=
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/lib/git.js</key>
 		<data>
@@ -2494,7 +2494,7 @@
 		</data>
 		<key>Resources/app/apm/node_modules/keytar/build/Release/keytar.node</key>
 		<data>
-		26qZw+tCkvwWcXmzotGnQH1rC0g=
+		JNYDeaOCRi2i0o678tK8ueLEDwU=
 		</data>
 		<key>Resources/app/apm/node_modules/keytar/lib/keytar.js</key>
 		<data>
@@ -6434,7 +6434,7 @@
 		</data>
 		<key>Resources/app/apm/node_modules/plist/package.json</key>
 		<data>
-		zu+G2klmKCq/2I4Yt33EpNyKfPI=
+		345LhcVo4V11hc3oi3D+WjNlwqI=
 		</data>
 		<key>Resources/app/apm/node_modules/q/CONTRIBUTING.md</key>
 		<data>
@@ -6694,7 +6694,7 @@
 		</data>
 		<key>Resources/app/apm/node_modules/temp/node_modules/rimraf/package.json</key>
 		<data>
-		H4dewAtHuDm8RF47x5rEHdx0Pzg=
+		ixUzj0dKauS4IjvfIFTztQ41Iu8=
 		</data>
 		<key>Resources/app/apm/node_modules/temp/node_modules/rimraf/rimraf.js</key>
 		<data>
@@ -16582,7 +16582,7 @@
 		</data>
 		<key>Resources/app/node_modules/atom-keymap/node_modules/keyboard-layout/build/Release/keyboard-layout-observer.node</key>
 		<data>
-		yuwYDySV8a4wvOc3nfYbDx+52PI=
+		pGN3xWvWiMw9UBy8QEwE7zIwEcs=
 		</data>
 		<key>Resources/app/node_modules/atom-keymap/node_modules/keyboard-layout/lib/keyboard-layout.js</key>
 		<data>
@@ -17830,7 +17830,7 @@
 		</data>
 		<key>Resources/app/node_modules/babel-core/node_modules/commander/package.json</key>
 		<data>
-		7trZaXRVzIw4U54cw/1yGxxO57E=
+		rFLjbu/8N8iAov3/Xjm1u3NYwKc=
 		</data>
 		<key>Resources/app/node_modules/babel-core/node_modules/convert-source-map/LICENSE</key>
 		<data>
@@ -21654,7 +21654,7 @@
 		</data>
 		<key>Resources/app/node_modules/bootstrap/package.json</key>
 		<data>
-		ov3qRqubkOQXArB5vhITslgbvm8=
+		4qEVezRygBIXjfc5eon2bV1tZBo=
 		</data>
 		<key>Resources/app/node_modules/bracket-matcher/CONTRIBUTING.md</key>
 		<data>
@@ -25358,7 +25358,7 @@
 		</data>
 		<key>Resources/app/node_modules/fuzzy-finder/lib/load-paths-handler.js</key>
 		<data>
-		f6TZHzdQIXHSYXjxNSpjOIMDAvI=
+		C7QpWMH71YJj6pCp+eKVs6V0mI8=
 		</data>
 		<key>Resources/app/node_modules/fuzzy-finder/lib/main.js</key>
 		<data>
@@ -25502,7 +25502,7 @@
 		</data>
 		<key>Resources/app/node_modules/fuzzy-finder/spec/fuzzy-finder-spec.js</key>
 		<data>
-		ZugJElLI2tUCgz5qk0sbn8lGTGM=
+		HYlXEZ4odlAuYD6FeGAh+dOMCZU=
 		</data>
 		<key>Resources/app/node_modules/git-diff/CONTRIBUTING.md</key>
 		<data>
@@ -25594,19 +25594,19 @@
 		</data>
 		<key>Resources/app/node_modules/git-utils/build/Release/git.node</key>
 		<data>
-		WUd0ViAUQhtHPU9E4D3olYv6oNE=
+		KE7UUT04XKafylvMs01mYz74+rA=
 		</data>
 		<key>Resources/app/node_modules/git-utils/build/Release/git2.a</key>
 		<data>
-		opPaIawb1Iy69Q8L9o1YsBSMpJI=
+		75zEOMQuhGCAVm13r5w0FwoXSLY=
 		</data>
 		<key>Resources/app/node_modules/git-utils/build/Release/http_parser.a</key>
 		<data>
-		3H0EF/fOyc3/qEvqDa1vYRuczcU=
+		T0oE+yJ+wudTsUmU8CwIYvsGGEQ=
 		</data>
 		<key>Resources/app/node_modules/git-utils/build/Release/zlib.a</key>
 		<data>
-		KAI2jfYMWg+UZVoY/MtYShah9xg=
+		VkIi7UrVzf8E+v3tjPZFcROWie0=
 		</data>
 		<key>Resources/app/node_modules/git-utils/lib/git.js</key>
 		<data>
@@ -26250,7 +26250,7 @@
 		</data>
 		<key>Resources/app/node_modules/jasmine-tagged/node_modules/jasmine-focused/node_modules/jasmine-node/package.json</key>
 		<data>
-		dn6LjDsWUBAvUmDMEadn/oHTNRk=
+		HPyI6Tc+Mln8w72gYAVDgx6a2FQ=
 		</data>
 		<key>Resources/app/node_modules/jasmine-tagged/node_modules/jasmine-focused/node_modules/jasmine-node/scripts/specs</key>
 		<data>
@@ -26874,7 +26874,7 @@
 		</data>
 		<key>Resources/app/node_modules/language-gfm/grammars/gfm.json</key>
 		<data>
-		4T2mI8L5DXzT6nv0ZckFCnsvqO8=
+		PjfTgqV5rv0IkUvLjscv3z7U03A=
 		</data>
 		<key>Resources/app/node_modules/language-gfm/script/build-emoji-pattern</key>
 		<data>
@@ -26890,7 +26890,7 @@
 		</data>
 		<key>Resources/app/node_modules/language-gfm/spec/gfm-spec.js</key>
 		<data>
-		cFiZmTRXO3wOHQR2/TfWxiioq1s=
+		Ezfoy3nDwA+18RuAgQEQ2tf/YdE=
 		</data>
 		<key>Resources/app/node_modules/language-git/CONTRIBUTING.md</key>
 		<data>
@@ -26934,7 +26934,7 @@
 		</data>
 		<key>Resources/app/node_modules/language-go/grammars/go.json</key>
 		<data>
-		c4qY6Szt4gBcXfELNHj0i14fyEg=
+		gDfKoHtomJDVTfJSwPaFYb4nP1s=
 		</data>
 		<key>Resources/app/node_modules/language-go/grammars/gohtml.json</key>
 		<data>
@@ -26954,7 +26954,7 @@
 		</data>
 		<key>Resources/app/node_modules/language-go/spec/go-spec.js</key>
 		<data>
-		UJCYUAaMyL+apFVndUX8QNNyaSQ=
+		gtyB/MlGZu1TJMWT/tBANyWgoZk=
 		</data>
 		<key>Resources/app/node_modules/language-html/CONTRIBUTING.md</key>
 		<data>
@@ -28706,7 +28706,7 @@
 		</data>
 		<key>Resources/app/node_modules/notifications/lib/notification-element.js</key>
 		<data>
-		iv1M+lNAeAmFczsIlKXbp1PUNn8=
+		fiVrcxMH5EHhZqjhhqcMxHj/joY=
 		</data>
 		<key>Resources/app/node_modules/notifications/lib/notification-issue.js</key>
 		<data>
@@ -28726,7 +28726,7 @@
 		</data>
 		<key>Resources/app/node_modules/notifications/lib/user-utilities.js</key>
 		<data>
-		LxYDWjHcWY5G0t8EeDXhXeTmVRU=
+		HVSda/6CXknxlRNFOl2Zj4KBUwo=
 		</data>
 		<key>Resources/app/node_modules/notifications/node_modules/moment/LICENSE</key>
 		<data>
@@ -31302,7 +31302,7 @@
 		</data>
 		<key>Resources/app/node_modules/notifications/spec/notifications-spec.js</key>
 		<data>
-		UBxOFRiqByb4L5yARLqPijofucg=
+		FhIvVjTtrX7tACrPv9F/4isn9AE=
 		</data>
 		<key>Resources/app/node_modules/notifications/styles/notifications.less</key>
 		<data>
@@ -31318,7 +31318,7 @@
 		</data>
 		<key>Resources/app/node_modules/nslog/build/Release/nslog.node</key>
 		<data>
-		riI7EwBmPrBaxlPiInW+JseFCdA=
+		4PLQoCZtQdoFwqBcGUFNzI1dKB8=
 		</data>
 		<key>Resources/app/node_modules/nslog/lib/nslog.js</key>
 		<data>
@@ -31714,11 +31714,11 @@
 		</data>
 		<key>Resources/app/node_modules/oniguruma/build/Release/onig_scanner.node</key>
 		<data>
-		dRkCmZp6zqvtQwjACtcyPwpdLVk=
+		3LNgCbce/LmuDJ585twsB1sCWA4=
 		</data>
 		<key>Resources/app/node_modules/oniguruma/build/Release/oniguruma.a</key>
 		<data>
-		5gubsoL8LuA5HFXh4EPteT+zrck=
+		BD/uilMJ+XtzckfOUtr64ZvDiXw=
 		</data>
 		<key>Resources/app/node_modules/oniguruma/lib/onig-reg-exp.js</key>
 		<data>
@@ -32062,7 +32062,7 @@
 		</data>
 		<key>Resources/app/node_modules/pathwatcher/build/Release/pathwatcher.node</key>
 		<data>
-		tFDGmT71oili44H/0GDs0yoZ1bM=
+		2SeuPFVraFjzZuBdCkyfRMbaR50=
 		</data>
 		<key>Resources/app/node_modules/pathwatcher/lib/directory.js</key>
 		<data>
@@ -39646,7 +39646,7 @@
 		</data>
 		<key>Resources/app/node_modules/runas/build/Release/runas.node</key>
 		<data>
-		0G3Y1+W71HXEO+oDXp+zKb09yjE=
+		6rYqAVJ1BKJK4qpC9GAYFRRh/9Q=
 		</data>
 		<key>Resources/app/node_modules/runas/lib/runas.js</key>
 		<data>
@@ -39694,7 +39694,7 @@
 		</data>
 		<key>Resources/app/node_modules/scandal/lib/path-scanner.js</key>
 		<data>
-		FzBsO+miR36qGXBXCYYQ1CBOOqo=
+		rgyBbRGrVQA/Hq0e8ItD5LfSPCs=
 		</data>
 		<key>Resources/app/node_modules/scandal/lib/path-searcher.js</key>
 		<data>
@@ -39958,7 +39958,7 @@
 		</data>
 		<key>Resources/app/node_modules/scandal/package.json</key>
 		<data>
-		ojyBa1qppCmk1Im08xhZBaR5+18=
+		qpmERfLuM89y59GPCoSNSL6nCLc=
 		</data>
 		<key>Resources/app/node_modules/scoped-property-store/LICENSE.md</key>
 		<data>
@@ -40034,7 +40034,7 @@
 		</data>
 		<key>Resources/app/node_modules/scrollbar-style/build/Release/scrollbar-style-observer.node</key>
 		<data>
-		45wt0rhgD8/Mgsw6af7Qdj7QMdM=
+		tzn+jx/n/+I3apnDx02MOxgpEXM=
 		</data>
 		<key>Resources/app/node_modules/scrollbar-style/lib/scrollbar-style.js</key>
 		<data>
@@ -41210,7 +41210,7 @@
 		</data>
 		<key>Resources/app/node_modules/spell-check/node_modules/spellchecker/build/Release/spellchecker.node</key>
 		<data>
-		u8I8+Ttq0EqbIS8LDooSBTOW5tk=
+		83y3+xeQ9Mhb5MXDPcbxGpYyJ5E=
 		</data>
 		<key>Resources/app/node_modules/spell-check/node_modules/spellchecker/lib/spellchecker.js</key>
 		<data>
@@ -41278,7 +41278,7 @@
 		</data>
 		<key>Resources/app/node_modules/status-bar/lib/main.js</key>
 		<data>
-		xRQrzkXGpA+f4YBcmWr9XdeBhkw=
+		j6EJ4r+/YOWZuQzFqEvFp2Fv5Gg=
 		</data>
 		<key>Resources/app/node_modules/status-bar/lib/selection-count-view.js</key>
 		<data>
@@ -41286,7 +41286,7 @@
 		</data>
 		<key>Resources/app/node_modules/status-bar/lib/status-bar-view.js</key>
 		<data>
-		YkL4AH/WT7mrOxJPoZDPaWvCE88=
+		UqrN9KhMtYacm9EVU3nhY3t8jsU=
 		</data>
 		<key>Resources/app/node_modules/status-bar/lib/tile.js</key>
 		<data>
@@ -41726,7 +41726,7 @@
 		</data>
 		<key>Resources/app/node_modules/symbols-view/node_modules/ctags/build/Release/ctags.node</key>
 		<data>
-		rkp9v0Jk1R00X/va/A+CcxV0QtU=
+		lLbRmBOTexSf8UhcHp8jf2GLQ8E=
 		</data>
 		<key>Resources/app/node_modules/symbols-view/node_modules/ctags/lib/ctags.js</key>
 		<data>
@@ -42690,7 +42690,7 @@
 		</data>
 		<key>Resources/app/package.json</key>
 		<data>
-		Z+DndXHTpqEWt0nBdg3JhragpHg=
+		vf8cGZi81P09bP75lwikHbNrlBg=
 		</data>
 		<key>Resources/app/resources/atom.png</key>
 		<data>
@@ -43289,6 +43289,14 @@ newlines</key>
 		<data>
 		ElHoMUuxxwNiV3X574NBhMC0vDQ=
 		</data>
+		<key>Resources/app/spec/fixtures/packages/theme-with-invalid-styles/index.less</key>
+		<data>
+		rj/hb8fZ6vPi0jpf6wRDwlqtT30=
+		</data>
+		<key>Resources/app/spec/fixtures/packages/theme-with-invalid-styles/package.json</key>
+		<data>
+		54dQjfr3Xt+OAJgULcfXhOSwFuE=
+		</data>
 		<key>Resources/app/spec/fixtures/packages/theme-with-package-file/package.json</key>
 		<data>
 		v2kiOEIPS2O8BpE2KsA+3N41oMQ=
@@ -43451,7 +43459,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/spec/package-manager-spec.coffee</key>
 		<data>
-		kglK4O0oLVWhCfDVZ9Eiq2wCeLc=
+		xHU//xxCJEM+Gzvhn4Oizq3eYBI=
 		</data>
 		<key>Resources/app/spec/package-spec.coffee</key>
 		<data>
@@ -43471,7 +43479,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/spec/pane-view-spec.coffee</key>
 		<data>
-		aTXdcn9QNsTANNhxwY0PmrWVtBk=
+		fIrQVEdvQOQTbNQ5m5uP7hmj9d4=
 		</data>
 		<key>Resources/app/spec/panel-container-element-spec.coffee</key>
 		<data>
@@ -43571,7 +43579,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/spec/theme-manager-spec.coffee</key>
 		<data>
-		mOEDe5rVN1JQvHA9vGGpxHb50MA=
+		7eEJKFGV2BpRYr1kRpdIvj0LOmA=
 		</data>
 		<key>Resources/app/spec/time-reporter.coffee</key>
 		<data>
@@ -43807,7 +43815,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/package.js</key>
 		<data>
-		4D3gwuKCbk6sajq1gawPK3xGhp4=
+		iwpfGrjE0kP2qy0ZJj0MKxZg6IU=
 		</data>
 		<key>Resources/app/src/pane-axis-element.js</key>
 		<data>
@@ -43831,7 +43839,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/pane-element.js</key>
 		<data>
-		K7FdDqsWASkEt1ejMN6SgFYZ5sc=
+		vrhUL6VCkPFhIVfNE6hbg6coJ7k=
 		</data>
 		<key>Resources/app/src/pane-view.js</key>
 		<data>
@@ -43839,7 +43847,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/pane.js</key>
 		<data>
-		6iJItGhuowQDAWoxB98vKZXRocc=
+		6xR2mKBNCSv3wH2F+imDR30ILFc=
 		</data>
 		<key>Resources/app/src/panel-container-element.js</key>
 		<data>
@@ -43963,7 +43971,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/theme-package.js</key>
 		<data>
-		TZEMBkIuLPp45moeE+NQRGumpNA=
+		z3pR85i3s2AKMQz0t5GLkfDSZHA=
 		</data>
 		<key>Resources/app/src/token.js</key>
 		<data>
@@ -43987,7 +43995,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/view-registry.js</key>
 		<data>
-		S4zmzwGCn29tI4GcTRzUk9snKKA=
+		iAJMK26s+YHXsa4omAHgb1F52oo=
 		</data>
 		<key>Resources/app/src/window-bootstrap.js</key>
 		<data>
@@ -44199,7 +44207,7 @@ newlines</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			qssx3dkjjhHA7sDYAO3GlTNfmWM=
+			jYUAHCRFgDqeRA9S57ft2xMp4QM=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.github.atom.helper" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = VEKTX9H2N7</string>
@@ -44233,7 +44241,7 @@ newlines</key>
 		</dict>
 		<key>Resources/app/LICENSE.md</key>
 		<data>
-		NGSj2CiFi+n3L0ZCDNbU0eEl0mQ=
+		W0nIj6POnnsw/EMJ0ZfuQVg0kwA=
 		</data>
 		<key>Resources/app/apm/CONTRIBUTING.md</key>
 		<data>
@@ -46631,11 +46639,11 @@ newlines</key>
 		</data>
 		<key>Resources/app/apm/node_modules/first-mate/node_modules/oniguruma/build/Release/onig_scanner.node</key>
 		<data>
-		5Ink2Oe5fwd+ib1Ts7ymY//LLRk=
+		JQt97xOOUgVyXonUT6FNeNoTNmw=
 		</data>
 		<key>Resources/app/apm/node_modules/first-mate/node_modules/oniguruma/build/Release/oniguruma.a</key>
 		<data>
-		d4KjyssPbvhRACo3QEVxBwtKWmA=
+		FAEld2NIIouxUdZ265bUdzqrTws=
 		</data>
 		<key>Resources/app/apm/node_modules/first-mate/node_modules/oniguruma/lib/onig-reg-exp.js</key>
 		<data>
@@ -46724,19 +46732,19 @@ newlines</key>
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/build/Release/git.node</key>
 		<data>
-		7aP9MGtzFHsQ+VIg/L1KEdaSgi8=
+		3KBIQb0BjlpdLPRByBNPnLOAF6c=
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/build/Release/git2.a</key>
 		<data>
-		t9BpLmA40nhFAy7u9Qqw7rOZZjc=
+		MFbCGKdVMhBhyvZl9fqLkZ5CL84=
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/build/Release/http_parser.a</key>
 		<data>
-		8LdgYP+7bJrgmg4RTfNopbELzlk=
+		mmt3ujn6YteE7DRUi5iQ9+M1AbU=
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/build/Release/zlib.a</key>
 		<data>
-		/wNd3i0H9C8ynA7ROq4XtFBD/s4=
+		nsWCfbu/QPzo6hfq7A+oMHba7Gc=
 		</data>
 		<key>Resources/app/apm/node_modules/git-utils/lib/git.js</key>
 		<data>
@@ -46756,7 +46764,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/apm/node_modules/keytar/build/Release/keytar.node</key>
 		<data>
-		26qZw+tCkvwWcXmzotGnQH1rC0g=
+		JNYDeaOCRi2i0o678tK8ueLEDwU=
 		</data>
 		<key>Resources/app/apm/node_modules/keytar/lib/keytar.js</key>
 		<data>
@@ -50741,7 +50749,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/apm/node_modules/plist/package.json</key>
 		<data>
-		zu+G2klmKCq/2I4Yt33EpNyKfPI=
+		345LhcVo4V11hc3oi3D+WjNlwqI=
 		</data>
 		<key>Resources/app/apm/node_modules/q/CONTRIBUTING.md</key>
 		<data>
@@ -51016,7 +51024,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/apm/node_modules/temp/node_modules/rimraf/package.json</key>
 		<data>
-		H4dewAtHuDm8RF47x5rEHdx0Pzg=
+		ixUzj0dKauS4IjvfIFTztQ41Iu8=
 		</data>
 		<key>Resources/app/apm/node_modules/temp/node_modules/rimraf/rimraf.js</key>
 		<data>
@@ -60979,7 +60987,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/atom-keymap/node_modules/keyboard-layout/build/Release/keyboard-layout-observer.node</key>
 		<data>
-		yuwYDySV8a4wvOc3nfYbDx+52PI=
+		pGN3xWvWiMw9UBy8QEwE7zIwEcs=
 		</data>
 		<key>Resources/app/node_modules/atom-keymap/node_modules/keyboard-layout/lib/keyboard-layout.js</key>
 		<data>
@@ -62267,7 +62275,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/babel-core/node_modules/commander/package.json</key>
 		<data>
-		7trZaXRVzIw4U54cw/1yGxxO57E=
+		rFLjbu/8N8iAov3/Xjm1u3NYwKc=
 		</data>
 		<key>Resources/app/node_modules/babel-core/node_modules/convert-source-map/LICENSE</key>
 		<data>
@@ -66141,7 +66149,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/bootstrap/package.json</key>
 		<data>
-		ov3qRqubkOQXArB5vhITslgbvm8=
+		4qEVezRygBIXjfc5eon2bV1tZBo=
 		</data>
 		<key>Resources/app/node_modules/bracket-matcher/CONTRIBUTING.md</key>
 		<data>
@@ -69845,7 +69853,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/fuzzy-finder/lib/load-paths-handler.js</key>
 		<data>
-		f6TZHzdQIXHSYXjxNSpjOIMDAvI=
+		C7QpWMH71YJj6pCp+eKVs6V0mI8=
 		</data>
 		<key>Resources/app/node_modules/fuzzy-finder/lib/main.js</key>
 		<data>
@@ -69989,7 +69997,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/fuzzy-finder/spec/fuzzy-finder-spec.js</key>
 		<data>
-		ZugJElLI2tUCgz5qk0sbn8lGTGM=
+		HYlXEZ4odlAuYD6FeGAh+dOMCZU=
 		</data>
 		<key>Resources/app/node_modules/git-diff/CONTRIBUTING.md</key>
 		<data>
@@ -70081,19 +70089,19 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/git-utils/build/Release/git.node</key>
 		<data>
-		WUd0ViAUQhtHPU9E4D3olYv6oNE=
+		KE7UUT04XKafylvMs01mYz74+rA=
 		</data>
 		<key>Resources/app/node_modules/git-utils/build/Release/git2.a</key>
 		<data>
-		opPaIawb1Iy69Q8L9o1YsBSMpJI=
+		75zEOMQuhGCAVm13r5w0FwoXSLY=
 		</data>
 		<key>Resources/app/node_modules/git-utils/build/Release/http_parser.a</key>
 		<data>
-		3H0EF/fOyc3/qEvqDa1vYRuczcU=
+		T0oE+yJ+wudTsUmU8CwIYvsGGEQ=
 		</data>
 		<key>Resources/app/node_modules/git-utils/build/Release/zlib.a</key>
 		<data>
-		KAI2jfYMWg+UZVoY/MtYShah9xg=
+		VkIi7UrVzf8E+v3tjPZFcROWie0=
 		</data>
 		<key>Resources/app/node_modules/git-utils/lib/git.js</key>
 		<data>
@@ -70757,7 +70765,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/jasmine-tagged/node_modules/jasmine-focused/node_modules/jasmine-node/package.json</key>
 		<data>
-		dn6LjDsWUBAvUmDMEadn/oHTNRk=
+		HPyI6Tc+Mln8w72gYAVDgx6a2FQ=
 		</data>
 		<key>Resources/app/node_modules/jasmine-tagged/node_modules/jasmine-focused/node_modules/jasmine-node/scripts/specs</key>
 		<data>
@@ -71381,7 +71389,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/language-gfm/grammars/gfm.json</key>
 		<data>
-		4T2mI8L5DXzT6nv0ZckFCnsvqO8=
+		PjfTgqV5rv0IkUvLjscv3z7U03A=
 		</data>
 		<key>Resources/app/node_modules/language-gfm/script/build-emoji-pattern</key>
 		<data>
@@ -71397,7 +71405,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/language-gfm/spec/gfm-spec.js</key>
 		<data>
-		cFiZmTRXO3wOHQR2/TfWxiioq1s=
+		Ezfoy3nDwA+18RuAgQEQ2tf/YdE=
 		</data>
 		<key>Resources/app/node_modules/language-git/CONTRIBUTING.md</key>
 		<data>
@@ -71441,7 +71449,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/language-go/grammars/go.json</key>
 		<data>
-		c4qY6Szt4gBcXfELNHj0i14fyEg=
+		gDfKoHtomJDVTfJSwPaFYb4nP1s=
 		</data>
 		<key>Resources/app/node_modules/language-go/grammars/gohtml.json</key>
 		<data>
@@ -71461,7 +71469,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/language-go/spec/go-spec.js</key>
 		<data>
-		UJCYUAaMyL+apFVndUX8QNNyaSQ=
+		gtyB/MlGZu1TJMWT/tBANyWgoZk=
 		</data>
 		<key>Resources/app/node_modules/language-html/CONTRIBUTING.md</key>
 		<data>
@@ -73238,7 +73246,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/notifications/lib/notification-element.js</key>
 		<data>
-		iv1M+lNAeAmFczsIlKXbp1PUNn8=
+		fiVrcxMH5EHhZqjhhqcMxHj/joY=
 		</data>
 		<key>Resources/app/node_modules/notifications/lib/notification-issue.js</key>
 		<data>
@@ -73258,7 +73266,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/notifications/lib/user-utilities.js</key>
 		<data>
-		LxYDWjHcWY5G0t8EeDXhXeTmVRU=
+		HVSda/6CXknxlRNFOl2Zj4KBUwo=
 		</data>
 		<key>Resources/app/node_modules/notifications/node_modules/moment/LICENSE</key>
 		<data>
@@ -75834,7 +75842,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/notifications/spec/notifications-spec.js</key>
 		<data>
-		UBxOFRiqByb4L5yARLqPijofucg=
+		FhIvVjTtrX7tACrPv9F/4isn9AE=
 		</data>
 		<key>Resources/app/node_modules/notifications/styles/notifications.less</key>
 		<data>
@@ -75850,7 +75858,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/nslog/build/Release/nslog.node</key>
 		<data>
-		riI7EwBmPrBaxlPiInW+JseFCdA=
+		4PLQoCZtQdoFwqBcGUFNzI1dKB8=
 		</data>
 		<key>Resources/app/node_modules/nslog/lib/nslog.js</key>
 		<data>
@@ -76246,11 +76254,11 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/oniguruma/build/Release/onig_scanner.node</key>
 		<data>
-		dRkCmZp6zqvtQwjACtcyPwpdLVk=
+		3LNgCbce/LmuDJ585twsB1sCWA4=
 		</data>
 		<key>Resources/app/node_modules/oniguruma/build/Release/oniguruma.a</key>
 		<data>
-		5gubsoL8LuA5HFXh4EPteT+zrck=
+		BD/uilMJ+XtzckfOUtr64ZvDiXw=
 		</data>
 		<key>Resources/app/node_modules/oniguruma/lib/onig-reg-exp.js</key>
 		<data>
@@ -76594,7 +76602,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/pathwatcher/build/Release/pathwatcher.node</key>
 		<data>
-		tFDGmT71oili44H/0GDs0yoZ1bM=
+		2SeuPFVraFjzZuBdCkyfRMbaR50=
 		</data>
 		<key>Resources/app/node_modules/pathwatcher/lib/directory.js</key>
 		<data>
@@ -84218,7 +84226,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/runas/build/Release/runas.node</key>
 		<data>
-		0G3Y1+W71HXEO+oDXp+zKb09yjE=
+		6rYqAVJ1BKJK4qpC9GAYFRRh/9Q=
 		</data>
 		<key>Resources/app/node_modules/runas/lib/runas.js</key>
 		<data>
@@ -84266,7 +84274,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/scandal/lib/path-scanner.js</key>
 		<data>
-		FzBsO+miR36qGXBXCYYQ1CBOOqo=
+		rgyBbRGrVQA/Hq0e8ItD5LfSPCs=
 		</data>
 		<key>Resources/app/node_modules/scandal/lib/path-searcher.js</key>
 		<data>
@@ -84530,7 +84538,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/scandal/package.json</key>
 		<data>
-		ojyBa1qppCmk1Im08xhZBaR5+18=
+		qpmERfLuM89y59GPCoSNSL6nCLc=
 		</data>
 		<key>Resources/app/node_modules/scoped-property-store/LICENSE.md</key>
 		<data>
@@ -84606,7 +84614,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/scrollbar-style/build/Release/scrollbar-style-observer.node</key>
 		<data>
-		45wt0rhgD8/Mgsw6af7Qdj7QMdM=
+		tzn+jx/n/+I3apnDx02MOxgpEXM=
 		</data>
 		<key>Resources/app/node_modules/scrollbar-style/lib/scrollbar-style.js</key>
 		<data>
@@ -85797,7 +85805,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/spell-check/node_modules/spellchecker/build/Release/spellchecker.node</key>
 		<data>
-		u8I8+Ttq0EqbIS8LDooSBTOW5tk=
+		83y3+xeQ9Mhb5MXDPcbxGpYyJ5E=
 		</data>
 		<key>Resources/app/node_modules/spell-check/node_modules/spellchecker/lib/spellchecker.js</key>
 		<data>
@@ -85865,7 +85873,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/status-bar/lib/main.js</key>
 		<data>
-		xRQrzkXGpA+f4YBcmWr9XdeBhkw=
+		j6EJ4r+/YOWZuQzFqEvFp2Fv5Gg=
 		</data>
 		<key>Resources/app/node_modules/status-bar/lib/selection-count-view.js</key>
 		<data>
@@ -85873,7 +85881,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/status-bar/lib/status-bar-view.js</key>
 		<data>
-		YkL4AH/WT7mrOxJPoZDPaWvCE88=
+		UqrN9KhMtYacm9EVU3nhY3t8jsU=
 		</data>
 		<key>Resources/app/node_modules/status-bar/lib/tile.js</key>
 		<data>
@@ -86338,7 +86346,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/node_modules/symbols-view/node_modules/ctags/build/Release/ctags.node</key>
 		<data>
-		rkp9v0Jk1R00X/va/A+CcxV0QtU=
+		lLbRmBOTexSf8UhcHp8jf2GLQ8E=
 		</data>
 		<key>Resources/app/node_modules/symbols-view/node_modules/ctags/lib/ctags.js</key>
 		<data>
@@ -87307,7 +87315,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/package.json</key>
 		<data>
-		Z+DndXHTpqEWt0nBdg3JhragpHg=
+		vf8cGZi81P09bP75lwikHbNrlBg=
 		</data>
 		<key>Resources/app/resources/atom.png</key>
 		<data>
@@ -87906,6 +87914,14 @@ newlines</key>
 		<data>
 		ElHoMUuxxwNiV3X574NBhMC0vDQ=
 		</data>
+		<key>Resources/app/spec/fixtures/packages/theme-with-invalid-styles/index.less</key>
+		<data>
+		rj/hb8fZ6vPi0jpf6wRDwlqtT30=
+		</data>
+		<key>Resources/app/spec/fixtures/packages/theme-with-invalid-styles/package.json</key>
+		<data>
+		54dQjfr3Xt+OAJgULcfXhOSwFuE=
+		</data>
 		<key>Resources/app/spec/fixtures/packages/theme-with-package-file/package.json</key>
 		<data>
 		v2kiOEIPS2O8BpE2KsA+3N41oMQ=
@@ -88068,7 +88084,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/spec/package-manager-spec.coffee</key>
 		<data>
-		kglK4O0oLVWhCfDVZ9Eiq2wCeLc=
+		xHU//xxCJEM+Gzvhn4Oizq3eYBI=
 		</data>
 		<key>Resources/app/spec/package-spec.coffee</key>
 		<data>
@@ -88088,7 +88104,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/spec/pane-view-spec.coffee</key>
 		<data>
-		aTXdcn9QNsTANNhxwY0PmrWVtBk=
+		fIrQVEdvQOQTbNQ5m5uP7hmj9d4=
 		</data>
 		<key>Resources/app/spec/panel-container-element-spec.coffee</key>
 		<data>
@@ -88188,7 +88204,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/spec/theme-manager-spec.coffee</key>
 		<data>
-		mOEDe5rVN1JQvHA9vGGpxHb50MA=
+		7eEJKFGV2BpRYr1kRpdIvj0LOmA=
 		</data>
 		<key>Resources/app/spec/time-reporter.coffee</key>
 		<data>
@@ -88424,7 +88440,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/package.js</key>
 		<data>
-		4D3gwuKCbk6sajq1gawPK3xGhp4=
+		iwpfGrjE0kP2qy0ZJj0MKxZg6IU=
 		</data>
 		<key>Resources/app/src/pane-axis-element.js</key>
 		<data>
@@ -88448,7 +88464,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/pane-element.js</key>
 		<data>
-		K7FdDqsWASkEt1ejMN6SgFYZ5sc=
+		vrhUL6VCkPFhIVfNE6hbg6coJ7k=
 		</data>
 		<key>Resources/app/src/pane-view.js</key>
 		<data>
@@ -88456,7 +88472,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/pane.js</key>
 		<data>
-		6iJItGhuowQDAWoxB98vKZXRocc=
+		6xR2mKBNCSv3wH2F+imDR30ILFc=
 		</data>
 		<key>Resources/app/src/panel-container-element.js</key>
 		<data>
@@ -88580,7 +88596,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/theme-package.js</key>
 		<data>
-		TZEMBkIuLPp45moeE+NQRGumpNA=
+		z3pR85i3s2AKMQz0t5GLkfDSZHA=
 		</data>
 		<key>Resources/app/src/token.js</key>
 		<data>
@@ -88604,7 +88620,7 @@ newlines</key>
 		</data>
 		<key>Resources/app/src/view-registry.js</key>
 		<data>
-		S4zmzwGCn29tI4GcTRzUk9snKKA=
+		iAJMK26s+YHXsa4omAHgb1F52oo=
 		</data>
 		<key>Resources/app/src/window-bootstrap.js</key>
 		<data>

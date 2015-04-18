@@ -146,7 +146,8 @@
       this.documentReaders = [];
       this.documentWriters = [];
       this.documentPollers = [];
-      return this.documentUpdateRequested = false;
+      this.documentUpdateRequested = false;
+      return this.stopPollingDocument();
     };
 
     ViewRegistry.prototype.requestDocumentUpdate = function() {

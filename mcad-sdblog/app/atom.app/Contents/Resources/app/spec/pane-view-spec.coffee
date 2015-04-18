@@ -118,6 +118,33 @@ describe "PaneView", ->
         paneModel.activateItem(view2)
         expect(pane.itemViews.find('#view-2').length).toBe 1
 
+    describe "when the new activeItem implements ::getPath", ->
+      beforeEach ->
+        paneModel.activateItem(editor1)
+
+      it "adds the file path as a data attribute to the pane", ->
+        expect(pane).toHaveAttr('data-active-item-path')
+
+      it "adds the file name as a data attribute to the pane", ->
+        expect(pane).toHaveAttr('data-active-item-name')
+
+      describe "when the activeItem is destroyed", ->
+        it "removes the data attributes", ->
+          pane.destroyItems()
+          expect(pane).not.toHaveAttr('data-active-item-path')
+          expect(pane).not.toHaveAttr('data-active-item-name')
+
+    describe "when the new activeItem does not implement ::getPath", ->
+      beforeEach ->
+        paneModel.activateItem(editor1)
+        paneModel.activateItem(document.createElement('div'))
+
+      it "does not add the file path as a data attribute to the pane", ->
+        expect(pane).not.toHaveAttr('data-active-item-path')
+
+      it "does not add the file name as data attribute to the pane", ->
+        expect(pane).not.toHaveAttr('data-active-item-name')
+
   describe "when an item is destroyed", ->
     it "triggers the 'pane:item-removed' event with the item and its former index", ->
       itemRemovedHandler = jasmine.createSpy("itemRemovedHandler")

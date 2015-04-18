@@ -636,9 +636,14 @@
     };
 
     Package.prototype.reloadStylesheets = function() {
-      var oldSheets, _ref4;
+      var error, oldSheets, _ref4;
       oldSheets = _.clone(this.stylesheets);
-      this.loadStylesheets();
+      try {
+        this.loadStylesheets();
+      } catch (_error) {
+        error = _error;
+        this.handleError("Failed to reload the " + this.name + " package stylesheets", error);
+      }
       if ((_ref4 = this.stylesheetDisposables) != null) {
         _ref4.dispose();
       }

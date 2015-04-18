@@ -727,6 +727,8 @@
         return atom.notifications.addWarning("Unable to save file: Read-only file system '" + error.path + "'");
       } else if (error.code === 'ENOSPC' && (error.path != null)) {
         return atom.notifications.addWarning("Unable to save file: No space left on device '" + error.path + "'");
+      } else if (error.code === 'ENXIO' && (error.path != null)) {
+        return atom.notifications.addWarning("Unable to save file: No such device or address '" + error.path + "'");
       } else if (errorMatch = /ENOTDIR, not a directory '([^']+)'/.exec(error.message)) {
         fileName = errorMatch[1];
         return atom.notifications.addWarning("Unable to save file: A directory in the path '" + fileName + "' could not be written to");
