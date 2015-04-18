@@ -1,8 +1,22 @@
 .header {
-  max-width: 12em;
+  @include clearfix;
+  width: 100%;
+  position: relative;
   line-height: 1;
   font-size: 1.8em;
-  .logo-sdo {
+  margin: 0;
+.logo-sdo {
     color: $color-logo-sdo;
   }
+.logo-mcad {
+    display: block;
+    height: 1.25em;
+    opacity: 0.4;
+    margin: 0.25em 0;
+    &.hover {
+      opacity: 1;
+    }
 }
+.mainnav {
+    float: right;
+  }
