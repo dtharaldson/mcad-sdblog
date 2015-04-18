@@ -16,6 +16,7 @@
     float: left;
     margin-right: 1em;
     padding: 0 0.5em;
+    border-bottom: 0.4em solid transparent;
     &:hover {
       border-bottom: 0.4em solid $black;
     }
@@ -26,4 +27,32 @@
     padding: 0.5em 0em;
     display: inline-block;
   }
+}
+
+/* Main Nav */
+.main-nav {
+  background-color: #fff;
+  color: #000000;
+  margin: 0.625em 0;
+  line-height: 1;
+}
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.625em;
+}
+
+.main-nav li {
+    display: inline-block;
+    font-weight: 500;
+    margin: 0 0.625em;
+}
+
+.main-nav a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  border-bottom: 0.125em solid #fff;
 }

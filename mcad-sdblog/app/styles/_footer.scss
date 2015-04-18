@@ -1,0 +1,13 @@
+// .page-footer.scss
+
+.page-footer {
+  @include clearfix;
+  width: 960 / 16 * 1em;
+  padding: 2em 0;
+  p {
+    font-size: 0.8em;
+    border-top: 1px solid $gray-lighter;
+    margin-bottom: 0;
+    padding-top: 1em;
+  }
+}

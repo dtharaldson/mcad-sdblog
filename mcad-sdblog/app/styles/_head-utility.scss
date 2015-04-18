@@ -1,0 +1,31 @@
+// head-utility.scss
+
+.head-utility {
+  line-height: 1;
+  font-size: 0.8em;
+  float: right;
+  h2 {
+  @include visuallyhidden;
+  }
+  ul {
+    @include clearfix;
+    margin: 0.625em;
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    float: left;
+    padding: 0 0.5em;
+    border-left: 1px solid $gray;
+  }
+  a {
+    color: $gray;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5em 0.25em;
+    display: inline-block;
+    &:hover{
+      color: $black;
+    }
+  }
+}
