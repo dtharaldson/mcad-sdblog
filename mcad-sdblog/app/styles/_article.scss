@@ -1,13 +1,38 @@
 .article {
-  color: $white;
-  width: 32%;
   height: 20em;
-  background-image: linear-gradient(to bottom, red, #f06d06);
+  width: 100%;
+  background: linear-gradient(red, transparent);
+  padding: 1em;
+  margin: 0.5em;
+  float: left;
+  color: white;
+  &:hover {
+    background: red;
+  }
+  .post-date: {
+    float: right;
+  }
+  .post-date,
+  .category {
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.8em;
+    line-height: 1;
+  }
   img {
     z-index: -10;
     max-width: none;
   }
-  time {
-    float: right;
+  &.block-small {
+    width: 25%;
   }
-}
+
+  &.block-medium {
+    width: 35%;
+  }
+
+  &.block-large {
+    width: 45%;
+  }

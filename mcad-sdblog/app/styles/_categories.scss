@@ -1,0 +1,25 @@
+// _categories.scss
+
+.category-blue {
+  @include gradient-to-solid-hover($blue);
+}
+
+.category-green {
+  @include gradient-to-solid-hover($green);
+}
+
+.category-yellow {
+  @include gradient-to-solid-hover($yellow);
+}
+
+.category-pink {
+  @include gradient-to-solid-hover($pink);
+}
+
+.category-purple {
+  @include gradient-to-solid-hover($purple);
+}
+
+.category-red {
+  @include gradient-to-solid-hover($red);
+}

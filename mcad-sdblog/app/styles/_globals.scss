@@ -15,7 +15,7 @@ body {
 
 .browsehappy {
   margin: 0.2em 0;
-  background: #ccc;
+  background: #grey-light;
   color: $black;
   padding: 0.2em 0;
 }
@@ -24,10 +24,15 @@ img {
   max-width: 100%;
 }
 
+.container {
+  @include clearfix;
+}
 
-
-
-
+.post-link {
+  @include clearfix;
+  margin: 0;
+  padding-top: 1em;
+}
 
 .muse-img {
   border: 1px solid #ccc;
@@ -38,32 +43,4 @@ img {
   clip: rect(0 0 0 0);
   height: 1px; width: 1px;
   margin: -1px; padding: 0; border: 0;
-}
-
-/* Main Nav */
-.main-nav {
-  background-color: #fff;
-  color: #000000;
-  margin: 0.625em 0;
-  line-height: 1;
-}
-.main-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0.625em;
-}
-
-.main-nav li {
-    display: inline-block;
-    font-weight: 500;
-    margin: 0 0.625em;
-}
-
-.main-nav a {
-  color: #000000;
-  text-decoration: none;
-}
-
-.main-nav a:hover {
-  border-bottom: 0.125em solid #fff;
 }

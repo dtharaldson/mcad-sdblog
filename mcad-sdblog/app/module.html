@@ -10,12 +10,12 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
-    <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/bower_components/fontawesome.css/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.scss">
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -81,15 +81,35 @@
     <img class="sample-image" src="images/modules/article.png" alt="Article">
 
     <!-- .article -->
-    <article class="main">
-  		<figure>
-  			<img src="images/1bl" alt="bucketlist">
-        <figcaption>
-          <p id="subh1">Natural Leadership</p><p id="date">Jul 9, 2014</p>
-          <h2>Sustainability Bucket List</h2>
-        </figcaption>
-      </figure>
-    </article>
+      <div class="container">
+      <article class="main category-blue block-small">
+    		<p class="post-date">Jul 9, 2014</p>
+        <p class="category">Natural Leadership</p>
+    		<img src="images/1bl" alt="bucketlist">
+        <h1>Sustainability Bucket List</h1>
+      </article>
+
+      <article class="main category-yellow block-medium">
+        <p class="post-date">Jul 9, 2014</p>
+        <p class="category">Natural Leadership</p>
+        <img src="images/1bl" alt="bucketlist">
+        <h1>Sustainability Bucket List</h1>
+      </article>
+
+      <article class="main category-purple block-large">
+        <p class="post-date">Jul 9, 2014</p>
+        <p class="category">Natural Leadership</p>
+        <img src="images/1bl" alt="bucketlist">
+        <h1>Sustainability Bucket List</h1>
+      </article>
+
+      <article class="main category-red block-small">
+        <p class="post-date">Jul 9, 2014</p>
+        <p class="category">Natural Leadership</p>
+        <img src="images/1bl" alt="bucketlist">
+        <h1>Sustainability Bucket List</h1>
+      </article>
+    </div>
     <!-- end .article -->
   </div>
 
