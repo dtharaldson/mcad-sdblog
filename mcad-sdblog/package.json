@@ -7,7 +7,7 @@
     "autoprefixer-core": "^4.0.2",
     "browser-sync": "^1.8.2",
     "del": "^1.1.1",
-    "gulp": "^3.6.0",
+    "gulp": "^3.8.11",
     "gulp-cache": "^0.2.2",
     "gulp-csso": "^0.2.6",
     "gulp-if": "^1.2.1",
