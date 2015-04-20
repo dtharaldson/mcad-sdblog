@@ -1,6 +1,6 @@
 /*global -$ */
 'use strict';
-// generated on 2015-04-11 using generator-gulp-webapp 0.3.0
+// generated on 2015-04-20 using generator-gulp-webapp 0.3.0
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
@@ -112,6 +112,7 @@ gulp.task('wiredep', function () {
 
   gulp.src('app/*.html')
     .pipe(wiredep({
+      exclude: ['bootstrap-sass-official'],
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app'));

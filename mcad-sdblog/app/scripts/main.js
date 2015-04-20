@@ -1,1 +1,2 @@
-$('.article').imagefill();
+/* jshint devel:true */
+console.log('\'Allo \'Allo!');
